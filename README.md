@@ -1,8 +1,8 @@
-``# EmployeeApplication - A Prototype for Simplified Employee Management
+# EmployeeApp - A Prototype for Simplified Employee Management
 
 ## Overview
 
-**EmployeeApplication** is a prototype desktop application designed to streamline the process of managing all employee-related tasks, making it easy for managers to oversee employee data, salary calculations, vacations, and more in one centralized platform.
+**EmployeeApp** is a prototype desktop application designed to streamline the process of managing all employee-related tasks, making it easy for managers to oversee employee data, salary calculations, vacations, and more in one centralized platform.
 
 This project aims to enhance the efficiency of employee management by providing an intuitive interface where managers can handle critical tasks like payroll, vacation scheduling, and employee data tracking with ease. The long-term goal of this project is to offer a comprehensive solution that covers all aspects of employee management, ensuring both data integrity and usability.
 
