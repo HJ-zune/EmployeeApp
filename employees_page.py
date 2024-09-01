@@ -95,10 +95,15 @@ class EmployeesPage(ctk.CTkFrame):
 
             for j, (key, value) in enumerate(employee.items()):
                 employee_info_label = ctk.CTkEntry(self.employee_frame, font=("Arial", 14), width=entry_widths[key], justify="center")
-                employee_info_label.insert(0, value)
+                
+                # Ensure value is a string and not None
+                if value is not None:
+                    employee_info_label.insert(0, str(value))
+                else:
+                    employee_info_label.insert(0, "")
+
                 employee_info_label.configure(state="readonly")  # Make the text read-only but selectable
                 employee_info_label.grid(row=i, column=len(employee) - j, padx=5, pady=5, sticky="e")
-
 
     def add_employee(self):
         # Show the Add/Edit Employee Popup
@@ -165,6 +170,15 @@ class EmployeesPage(ctk.CTkFrame):
         employee_data = {label: entry.get() for label, entry in entries.items()}
         employee_number = employee_data["#"]
 
+        # Fields that should contain integers
+        integer_fields = ["رقم الهوية", "رقم الجوال", "الراتب أساسي", "بدل سكن", "بدل مواصلات"]
+
+        # Validate that integer fields contain only integers
+        for field in integer_fields:
+            if not employee_data[field].isdigit():
+                messagebox.showerror("Validation Error", f"The field '{field}' must contain only integers.")
+                return  # Exit the method if validation fails
+
         # Check if editing an existing employee or adding a new one
         is_new_employee = True
         for index, existing_employee in enumerate(self.employee_list):
@@ -182,6 +196,7 @@ class EmployeesPage(ctk.CTkFrame):
 
         # Close the popup
         popup.destroy()
+
 
     def save_to_excel(self, employee_data, is_new_employee):
         # Check if file exists, if not create it
