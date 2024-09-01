@@ -1,0 +1,2 @@
+dark_mode=True
+excel_file_path=EmployeeData.xlsx
