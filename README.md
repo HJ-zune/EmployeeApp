@@ -62,13 +62,6 @@ cd EmployeeApp
 python main.py
 ```
 
-## Current Functionality
-- **Employee Data Management**: Add, edit, and view employee details.
-- **Salaries Calculation**: Automated calculation of salaries based on inputs like bonuses, deductions, attendance, automated copy general data from previous month, and a read-only preview mode to help the user view past months.
-- **Vacation Tracking**: Track vacation days and automatically adjust salaries. (WIP)
-- **Advance Payment Tracking**: Track advance payment requests and calculate remaining automatically. (WIP)
-- **Dark and Light Mode**: Toggle between dark and light modes for better visibility and user comfort.
-
 ## Goals
 - **Dashboard**: Turn the home page into a dashboard giving the user useful information.
 - **Report Generation**: Implement an automated method to generate a report for a certain period or list of employee data.
